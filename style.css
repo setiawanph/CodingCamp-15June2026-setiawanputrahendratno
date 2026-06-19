@@ -116,7 +116,7 @@ p{
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    max-width: 50%;
+    flex: 1;
     min-height: 300px;
     margin: 0;
     padding: 10px;
@@ -128,19 +128,7 @@ p{
 }
 
 .pre_blank{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    width: 50%;
-    min-height: 300px;
-    margin: 0;
-    padding: 10px;
-    background-color:rgba(0, 0, 0, 0);
-    color: var(--text-color);
-    border-radius: 10px;
-    box-shadow: 0 20px 10px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, color 0.3s ease;
+    display: none;
 }
 
 .container{
@@ -183,7 +171,7 @@ p{
     border-color: white;
 }
 .grid-item2{
-    max-width: 625px;
+    max-width: 770px;
     background-color: blanchedalmond;
     color: rgb(132, 39, 8);
     padding: 2px;
@@ -205,7 +193,7 @@ label{
     font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
 }
-@media (max-width: 600px){
+@media (max-width: 770px){
     .container{
         grid-template-columns: 1fr; /*1 col in mobile */
     }
@@ -320,9 +308,23 @@ label{
 .two-panel > .pre_container {
     flex: 1;
 }
-@media (max-width: 600px) {
+@media (max-width: 770px) {
     .two-panel {
         flex-direction: column;
+    }
+}
+
+@media (max-width: 657px) {
+    #linkName,
+    #linkUrl {
+        min-width: 300px;
+        width: 100%;
+    }
+    .task-input-row:has(#linkName) {
+        flex-wrap: wrap;
+    }
+    .task-input-row:has(#linkName) .adding {
+        width: 100%;
     }
 }
 
